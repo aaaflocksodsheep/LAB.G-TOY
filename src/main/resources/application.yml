@@ -1,0 +1,37 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active: test
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 1GB
+jdbc:
+  practice:
+    driver: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mariadb://192.168.70.122:21302/practice?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMasterDownConnections=true&serverTimezone=UTC
+    username: lims
+    password: lims1324
+
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com:
+      zaxxer:
+        hikari: OFF
+    javax:
+      sql:
+        DataSource: OFF
+    jdbc:
+      audit: OFF
+      resultset: OFF
+      resultsettable: OFF
+      sqlonly: INFO
+      sqltiming: OFF
+      connection: OFF
+
+
