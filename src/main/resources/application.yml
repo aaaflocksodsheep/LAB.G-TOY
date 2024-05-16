@@ -10,7 +10,7 @@ spring:
 jdbc:
   practice:
     driver: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mariadb://192.168.70.122:21302/practice?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMasterDownConnections=true&serverTimezone=UTC
+    url: jdbc:log4jdbc:mariadb://221.150.237.2:41033/practice?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMasterDownConnections=true&serverTimezone=UTC
     username: lims
     password: lims1324
 
