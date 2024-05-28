@@ -16,7 +16,6 @@ public class BoardController {
     private final BoardService boardService;
     private final UserService userService;
 
-    @Autowired
     public BoardController(BoardService boardService, UserService userService) {
         this.boardService = boardService;
         this.userService = userService;

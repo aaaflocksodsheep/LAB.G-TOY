@@ -65,3 +65,4 @@
     <delete id="deleteUser" parameterType="int">
         DELETE FROM User WHERE user_idx = #{userId}
     </delete>
+</mapper>
