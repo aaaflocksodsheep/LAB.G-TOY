@@ -5,30 +5,24 @@
 
     <!-- Board 관련 쿼리 -->
     <insert id="insertBoard" parameterType="com.labgenomics.practice.api.model.Board">
-        INSERT INTO Board (user_idx, title, content, mention, create_at, create_by, modified_at, modified_by, hit)
-        VALUES (#{userIdx}, #{title}, #{content}, #{mention}, #{createAt}, #{createBy}, #{modifiedAt}, #{modifiedBy}, #{hit})
+        INSERT INTO Board (user_idx, title, content, mention, create_at, create_by, modified_at, modified_by, hit, is_hidden)
+        VALUES (#{userIdx}, #{title}, #{content}, #{mention}, #{createAt}, #{createBy}, #{modifiedAt}, #{modifiedBy}, #{hit}, false)
     </insert>
 
     <select id="selectBoardById" parameterType="int" resultType="com.labgenomics.practice.api.model.Board">
-        SELECT * FROM Board WHERE board_id = #{boardId}
+        SELECT * FROM Board WHERE board_id = #{boardId} AND is_hidden = false
     </select>
 
     <update id="updateBoard" parameterType="com.labgenomics.practice.api.model.Board">
         UPDATE Board
         SET user_idx = #{userIdx}, title = #{title}, content = #{content}, mention = #{mention}, create_at = #{createAt},
             create_by = #{createBy}, modified_at = #{modifiedAt}, modified_by = #{modifiedBy}, hit = #{hit}
-        WHERE board_id = #{boardId}
+        WHERE board_id = #{boardId} AND is_hidden = false
     </update>
-
-    <delete id="deleteBoard" parameterType="int">
-        DELETE FROM Board WHERE board_id = #{boardId}
-    </delete>
 
     <update id="hideBoard" parameterType="int">
         UPDATE Board SET is_hidden = true WHERE board_id = #{boardId}
     </update>
-
-
 
 
     <!-- BoardComment 관련 쿼리 -->
@@ -71,4 +65,3 @@
     <delete id="deleteUser" parameterType="int">
         DELETE FROM User WHERE user_idx = #{userId}
     </delete>
-</mapper>
