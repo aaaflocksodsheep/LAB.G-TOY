@@ -31,8 +31,8 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public void deleteBoard(int boardId) {
-        testMapper.deleteBoard(boardId);
+    public void hideBoard(int boardId) {
+        testMapper.hideBoard(boardId); // 숨김 처리 메서드 호출
     }
 
     // BoardComment 관련 메서드

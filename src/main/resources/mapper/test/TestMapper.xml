@@ -24,6 +24,13 @@
         DELETE FROM Board WHERE board_id = #{boardId}
     </delete>
 
+    <update id="hideBoard" parameterType="int">
+        UPDATE Board SET is_hidden = true WHERE board_id = #{boardId}
+    </update>
+
+
+
+
     <!-- BoardComment 관련 쿼리 -->
     <insert id="insertBoardComment" parameterType="com.labgenomics.practice.api.model.BoardComment">
         INSERT INTO BoardComment (board_id, user_idx, content, create_at, create_by, modified_at, modified_by)

@@ -11,8 +11,9 @@ public interface TestMapper {
     // Board 관련 메서드
     void insertBoard(Board board);
     Board selectBoardById(@Param("boardId") int boardId);
+
     void updateBoard(Board board);
-    void deleteBoard(@Param("boardId") int boardId);
+    void hideBoard(@Param("boardId") int boardId); // 삭제 대신 숨김 처리
 
     // BoardComment 관련 메서드
     void insertBoardComment(BoardComment boardComment);

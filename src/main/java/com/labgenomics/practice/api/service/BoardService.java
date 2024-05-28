@@ -9,7 +9,7 @@ public interface BoardService {
     void insertBoard(Board board);
     Board selectBoardById(int boardId);
     void updateBoard(Board board);
-    void deleteBoard(int boardId);
+    void hideBoard(int boardId); // 숨김 처리 메서드 추가
 
     // BoardComment 관련 메서드
     void insertBoardComment(BoardComment boardComment);
