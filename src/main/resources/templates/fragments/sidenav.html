@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sidenav</title>
+</head>
+<body>
+    <div th:fragment="sidenav">
+        <aside>
+            <ul>
+                <li><a th:href="@{/section1}">Section 1</a></li>
+                <li><a th:href="@{/section2}">Section 2</a></li>
+                <li><a th:href="@{/section3}">Section 3</a></li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>
