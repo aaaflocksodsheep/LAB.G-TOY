@@ -6,7 +6,7 @@ import com.labgenomics.practice.api.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-@Mapper
+
 public interface TestMapper {
     // Board 관련 메서드
     void insertBoard(Board board);

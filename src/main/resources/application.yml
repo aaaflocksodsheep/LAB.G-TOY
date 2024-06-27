@@ -3,6 +3,11 @@ spring:
     allow-bean-definition-overriding: true
   profiles:
     active: test
+  thymeleaf:
+    prefix: classpath:templates/
+    suffix: .html
+    cache: false
+    enabled: true
   servlet:
     multipart:
       max-file-size: 200MB

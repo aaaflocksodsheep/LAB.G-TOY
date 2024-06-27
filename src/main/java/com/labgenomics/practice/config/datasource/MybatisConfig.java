@@ -32,7 +32,7 @@ import javax.sql.DataSource;
 // MyBatis 매퍼 인터페이스를 자동으로 스캔하여 Spring 빈으로 등록
 // MapperScan : MyBatis 프레임워크에서 제공하는 어노테이션
 // basePackages : MyBatis 매퍼 인터페이스 스캔, sqlSessionFactoryRef : 매퍼 인터페이스가 사용할 빈 지정, 뒤가 변수
-@MapperScan(basePackages = "com.labgenomics.practice.api", sqlSessionFactoryRef = "sqlSessionFactoryBean")
+@MapperScan(basePackages = "com.labgenomics.practice.*.mapper", sqlSessionFactoryRef = "sqlSessionFactoryBean")
 
 @Slf4j // 클래스를 위한 Logger 인스턴스 자동 생성
 

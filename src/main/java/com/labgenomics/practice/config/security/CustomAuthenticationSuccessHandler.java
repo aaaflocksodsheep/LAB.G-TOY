@@ -56,9 +56,6 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 
 		Authentication auth = con.getAuthentication();
 		log.info("Auth session {}", auth);
-		log.info("Auth session {}", authentication.getAuthorities());
-
-
 
 		SavedRequest savedRequest = requestCache.getRequest(request, response);
 		if(savedRequest != null) {
@@ -66,7 +63,7 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 			redirectStrategy.sendRedirect(request, response, savedRequest.getRedirectUrl());
 		}
 
-		log.info("로그인 성공 {}", authentication.getAuthorities());
+		log.info("로그인 성공 {}", authentication.getPrincipal());
 
 		redirectStrategy.sendRedirect(request, response, getTarget());
 	}
